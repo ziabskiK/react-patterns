@@ -1,0 +1,50 @@
+$background: #282c34;
+$white:  white;
+$blue: #00FFCD;
+$width: 250px;
+
+@mixin border {
+  border: 3px solid $blue 
+}
+
+.App {
+  text-align: center;
+  
+  &-logo {
+    height: 40vmin;
+  }  
+
+  &-header {
+    background-color: $background;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $white;
+  }  
+
+  &-link {
+    color: $blue;
+  }
+  
+}
+
+.card-wrapper{
+  @include border();  
+  margin:10px;
+  width: 450px;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 16px;
+  
+
+  .profile-image{
+    @include border();
+    border-radius: 50%;
+    margin:10px;
+    width:50%;
+   
+  }
+}
